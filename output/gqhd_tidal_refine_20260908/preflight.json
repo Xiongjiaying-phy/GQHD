@@ -1,0 +1,50 @@
+{
+  "tests": {
+    "literature_k2": {
+      "computed": 0.11711184644629206,
+      "reference": 0.11706481970723283,
+      "relative_error": 0.00040171538449240707,
+      "passed": true,
+      "tolerance": 0.003
+    },
+    "integration_convergence": {
+      "coarse_Lambda": 441.0587903579485,
+      "fine_Lambda": 440.4171423190109,
+      "finer_Lambda": 440.3928437580432,
+      "relative_coarse": 0.0015121648985538805,
+      "relative_fine": 5.5174740716257276e-05,
+      "passed": true
+    },
+    "joint_mass_quadrature": {
+      "logL_16x64": -14.35360108744987,
+      "logL_32x96": -14.406914588214462,
+      "logL_64x192": -14.407198390483234,
+      "seconds": 2.131190061569214,
+      "passed": true
+    }
+  },
+  "source": "Damour & Nagar arXiv:0906.0096, Eq.97 Table I, gamma=2 mu-polytrope; https://arxiv.org/pdf/0906.0096",
+  "earlier_diagnostic": "preflight_hinderer_table_diagnostic.json retains the 1.001% mismatch to Hinderer Table1 at C=.1. Use the independent explicit mu-polytrope fit as the benchmark; no tolerance relaxation.",
+  "bandwidth_sensitivity": {
+    "0.25": -14.392422896521786,
+    "0.3": -14.406914588214462,
+    "0.35": -14.408678601068683
+  },
+  "joint_posterior": {
+    "sample_count": 3952,
+    "dimensions": [
+      "Mc_detector",
+      "q",
+      "Lambda1",
+      "Lambda2"
+    ],
+    "mc_bounds": [
+      1.1972132456920122,
+      1.1979995969416846
+    ],
+    "geocentric_redshift": 0.0099,
+    "prior_handling": "uniform detector-component masses retained as event mass prior; coordinate Jacobian cancels on recycling; uniform independent Lambda priors constant inside 0..5000",
+    "source": "https://dcc.ligo.org/LIGO-P1800061/public"
+  },
+  "passed": true
+}
